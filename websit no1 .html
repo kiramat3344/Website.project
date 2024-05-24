@@ -1,0 +1,531 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Document</title>
+   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+   <style>
+      body{
+         background-image: url(/back.jpg);
+      }
+      body{
+         padding: 10px;
+      }
+      li {
+
+         list-style-type: none;
+         padding: 15px;
+         font-weight: bold;
+         display: inline;
+         font-size: 18px;
+         
+
+
+      }
+
+      ul {
+         height: 35px;
+         width: 1250px;
+         text-align: right;
+         margin-top: 10px;
+         position: fixed;
+         margin-left: 30px;
+      }
+
+      nav {
+         background-color: blue;
+         height: 45px;
+         width: 1315px;
+      }
+
+      .logo {
+         position: fixed;
+         width: 80px;
+         float: left;
+      }
+
+      .bit {
+         font-size: 50px;
+         color: blue;
+         font-weight: bold;
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+
+      }
+
+      .ok {
+         position: relative;
+         font-size: 50px;
+         color: rgb(184, 241, 232);
+         font-weight: bold;
+         font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+         margin-top: -60px;
+
+      }
+
+      .line {
+         font-weight: bold;
+         font-size: 20px;
+         font-family: 'Times New Roman', Times, serif;
+         margin-top: -50px;
+         color: white;
+      }
+
+      h1 {
+         font-weight: bold;
+         font-size: 35px;
+         color: navy;
+         font-family: Verdana, Geneva, Tahoma, sans-serif;
+         text-decoration: underline;
+      }
+
+      .paragraf {
+         width: 900px;
+         height: 450px;
+         color: white;
+      }
+      .school{
+         float: right;
+         width: 600px;
+         height: 250px;
+         
+         
+         
+      }
+      .good{
+         color: white;
+         text-decoration: none;
+
+      }
+      button {
+ position: relative;
+ border: none;
+ background: transparent;
+ padding: 0;
+ cursor: pointer;
+ outline-offset: 4px;
+ transition: filter 250ms;
+ user-select: none;
+ touch-action: manipulation;
+}
+
+.shadow {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border-radius: 12px;
+ background: hsl(0deg 0% 0% / 0.25);
+ will-change: transform;
+ transform: translateY(2px);
+ transition: transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+.edge {
+ position: absolute;
+ top: 0;
+ left: 0;
+ width: 100%;
+ height: 100%;
+ border-radius: 12px;
+ background: linear-gradient(
+    to left,
+    hsl(251, 89%, 41%) 0%,
+    hsl(253, 83%, 49%) 8%,
+    hsl(249, 83%, 46%) 92%,
+    hsl(241, 85%, 49%) 100%
+  );
+}
+
+.front {
+ display: block;
+ position: relative;
+ padding: 12px 27px;
+ border-radius: 12px;
+ font-size: 1.1rem;
+ color: white;
+ background-color: blue;
+ will-change: transform;
+ transform: translateY(-4px);
+ transition: transform
+    600ms
+    cubic-bezier(.3, .7, .4, 1);
+}
+
+button:hover {
+ filter: brightness(110%);
+}
+
+button:hover .front {
+ transform: translateY(-6px);
+ transition: transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+button:active .front {
+ transform: translateY(-2px);
+ transition: transform 34ms;
+}
+
+button:hover .shadow {
+ transform: translateY(4px);
+ transition: transform
+    250ms
+    cubic-bezier(.3, .7, .4, 1.5);
+}
+
+button:active .shadow {
+ transform: translateY(1px);
+ transition: transform 34ms;
+}
+
+button:focus:not(:focus-visible) {
+ outline: none;
+}
+.boy{
+   height: 320px;
+   width: 200px;
+   float: right;
+   margin-right: 40px;
+   margin-top: -20px;
+}
+.dealing{
+   color: blue;
+   size: 50px;
+   margin-top: -17px;
+}
+.it{
+   margin-top: -20px;
+}
+.card1{
+width: 320px;
+height: 400px;
+margin-left: 120px;
+}
+.card2{
+   width: 320px;
+height: 400px;
+margin-top: -399px;
+margin-left: 507px;
+
+}
+.card3{
+width: 320px;
+height: 400px;
+margin-top: -401px;
+margin-left: 897px;
+}
+.bage1 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_box1 {
+  width: 1000px;
+  height: 400px;
+  border-radius: 20px;
+  background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.55);
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.card_box1:hover {
+  transform: scale(0.9);
+}
+
+.card_box1 span {
+  position: absolute;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  top: -10px;
+  left: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_box1 span::before {
+  content: 'Development ';
+  position: absolute;
+  width: 150%;
+  height: 40px;
+  background-image: linear-gradient(45deg, #ff6547 0%, #ffb144  51%, #ff7053  100%);
+  transform: rotate(-45deg) translateY(-20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.23);
+}
+
+.card_box1 span::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  z-index: -1;
+  box-shadow: 140px -140px #cc3f47;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+}
+.bage2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_box2 {
+  width: 1000px;
+  height: 400px;
+  border-radius: 20px;
+  background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.55);
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.card_box2:hover {
+  transform: scale(0.9);
+}
+
+.card_box2 span {
+  position: absolute;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  top: -10px;
+  left: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_box2 span::before {
+  content: 'Website ';
+  position: absolute;
+  width: 150%;
+  height: 40px;
+  background-image: linear-gradient(45deg, #ff6547 0%, #ffb144  51%, #ff7053  100%);
+  transform: rotate(-45deg) translateY(-20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.23);
+}
+
+.card_box2 span::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  z-index: -1;
+  box-shadow: 140px -140px #cc3f47;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+}
+.bage3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_box3 {
+  width: 1000px;
+  height: 400px;
+  border-radius: 20px;
+  background: linear-gradient(170deg, rgba(58, 56, 56, 0.623) 0%, rgb(31, 31, 31) 100%);
+  position: relative;
+  box-shadow: 0 25px 50px rgba(0,0,0,0.55);
+  cursor: pointer;
+  transition: all .3s;
+}
+
+.card_box3:hover {
+  transform: scale(0.9);
+}
+
+.card_box3 span {
+  position: absolute;
+  overflow: hidden;
+  width: 150px;
+  height: 150px;
+  top: -10px;
+  left: -10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.card_box3 span::before {
+  content: 'Apps ';
+  position: absolute;
+  width: 150%;
+  height: 40px;
+  background-image: linear-gradient(45deg, #ff6547 0%, #ffb144  51%, #ff7053  100%);
+  transform: rotate(-45deg) translateY(-20px);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.23);
+}
+
+.card_box3 span::after {
+  content: '';
+  position: absolute;
+  width: 10px;
+  bottom: 0;
+  left: 0;
+  height: 10px;
+  z-index: -1;
+  box-shadow: 140px -140px #cc3f47;
+  background-image: linear-gradient(45deg, #FF512F 0%, #F09819  51%, #FF512F  100%);
+}
+.what{
+color: blue;
+font-size: 24px;
+margin-top: -20px;
+}
+.hallo{
+   margin-left: 70px;
+   margin-top: 120px;
+}
+.web1{
+   size: 70em;
+   color: blue;
+   margin-left: 10px;
+}
+.web2{
+   size: 70em;
+   color: blue;
+   margin-top: -15px;
+}
+.web3{
+   color: white;
+}
+.know{
+   color: blue;
+}
+.smit{
+   color: white;
+}
+.message{
+   color: rgb(211, 185, 137);
+   text-decoration: none;
+}
+.good:hover{
+   background-color: red;
+   color: black;
+}
+     
+   </style>
+ 
+</head>
+
+<body>
+
+   <header>
+      
+      <nav>
+        
+
+         <ul>
+            <li><a href="" class="good">Home</a></li>
+            <li><a href="" class="good">Services</a></li>
+            <li><a href="" class="good">Training</a></li>
+            <li><a href="" class="good">About Us</a></li>
+            <li><a href="" class="good">Contect Us</a></li>
+            <li><a href="" class="good">Blogs</a></li>
+         </ul>
+          <img class="logo" src="./work.png" alt="">
+      </nav>
+      <img class="school" src="/gpp.png" alt="">
+      <div>
+         <p class="bit">BIT <span class="smit">SMIT</span> LABS </p> <br>
+         <p class="ok">INNOVATIVE</p> <br>
+         <p class="line">
+            4 Words that Better Describe Our Approach And Our Team!
+         </p>
+
+        <button>
+  <span class="shadow"></span>
+  <span class="edge"></span>
+  <span class="front text"> <a href="mailto:kiramat0323@gmail.com">Contact Us</a>
+  </span>
+</button>
+         <br><br>
+         
+         <h1>CEO <span class="message">MESSAGE</span></h1>
+         <img class="boy" src="/boy.png" alt="">
+      </div>
+      <div class="paragraf">Lorem ipsum dolor sit Lorem ipsum dolor sit amet consectetur, adipisicing elit. Omnis, earum
+         natus. At reprehenderit omnis error reiciendis aliquam adipisci hic incidunt praesentium iste qua Lorem ipsum
+         dolor sit, amet consectetur adipisicing elit. Magni corporis sapiente sed quis modi, aliquid sit cum est earum
+         quae repudiandae reiciendis tenetur sunt scipit corporis
+         perspiciatis dolorum maxime eligendi tempori <span class="readmore">bus, enim quas adipisci quia voluptate in nihil cum veniam ipsa
+         modi beatae dolores nam architecto! Accusamus labore dicta odit voluptatibus. Necessitatibus iusto officiis
+         nihil vitae quo doloremque nulla sunt sed, voluptatum labore beatae dolorem? Tempora, delectus qui. Natus optio
+         eligendi eaque ullam nostrum, nihil nisi illum perspiciatis, sunt, vero sed. Incidunt quae rem hic placeat modi
+         recusandae sapiente voluptatum odit illo id perspiciatis provident, officia maxime quibusdam pariatur dicta
+         illum consequnda ea deserunt recusandae placeat fuga quam repellat tempora est
+         atque sed rerum optio porro sint officia? Ipsam ut quibusdam vel at culpa possimus velit molestiae quia
+         accusamus? Enim unde inventore, sint doloremque nu elit. Praesentium iste dignissimos
+         expedita nam magni voluptatem voluptate ex illum incidunt. Rerum, aliquid. Minus vitae beatae, libero dicta
+         minima optio et ducimus modi odit consequatur voluptatem ex totam, dolorem molestias voluptates, pariatur nisi
+         facere nulla exercitationem? Accusamus non nemo quisquam modi! Dicta tenetur illum facilis nisi!</span>
+         <br><br><br>
+         <p>__What We Do</p>
+         <p class="dealing">DEALING IN ALL PROFESSIONAL</p>
+         <p class="it">IT SERVICES</p>
+         <div class="card1"><div class="bage1">
+    <div class="card_box1">
+      <div class="hallo"><h4 class="web1">Website</h4> <h4 class="web2">Development</h4><br><p class="web3">User-Interactive & Resul- <br>Oriented Web App <br>Development Services!</p>
+         <br><br><p class="know">Know More</p></div>
+        <span></span>
+    </div>
+</div> </div>
+         <div class="card2"><div class="bage2">
+    <div class="card_box2">
+      <div class="hallo"><h4 class="web1">UL/UX</h4> <h4 class="web2">Development</h4><br><p class="web3">Our UL-UX DesignsCan <br>Create Engaging User  <br>Experience For Your Business!</p>
+         <br><br><p class="know">Know More</p></div>
+        <span>
+        </span>
+    </div>
+</div></div>
+         <div class="card3"><div class="bage3">
+    <div class="card_box3">
+      <div class="hallo"><h4 class="web1">Apps</h4> <h4 class="web2">Development</h4><br><p class="web3">Take Your Business <br>Mobile with Our Top<br>Development Services!</p>
+      <br><br><p class="know">Know More</p></div>
+        <span></span>
+    </div>
+</div></div>
+<br><br><br><br><br>
+<p >___Client Testimonials</p>
+<p class="what">What They're Talking</p>
+   
+         </header>
+</body>
+
+</html>
